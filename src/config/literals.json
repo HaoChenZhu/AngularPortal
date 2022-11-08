@@ -1,0 +1,18 @@
+{
+    "homePages":[
+        {
+            "title": "WELCOME",
+            "url": "/home"
+        },
+        {
+            "title": "ROPA",
+            "url":"/clothing"
+        },{
+            "title":"ALIMENTACION",
+            "url":"/supermarket"
+        }
+    ],
+    "titleHome":"Bienvenido a mi tienda",
+    "descriptionHome": "Bienvenido a comprar lo que quieraas y disfruta de mi nueva pagina web con angular y springboot"
+    
+}
