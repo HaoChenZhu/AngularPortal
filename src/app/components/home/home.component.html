@@ -4,7 +4,7 @@
 
 <div class="grid grid-cols-2 gap-7">
     <ng-container *ngFor="let page of homePages">
-        <div *ngIf="page.url !== '/home'" class="box-main border-black border-2 rounded-md py-48 px-8 max-h-80 grid content-center hover:cursor-pointer
+        <div *ngIf="page.url !== '/home'" class="box-main border-black border-2 rounded-md py-36 px-8 max-h-80 grid content-center hover:cursor-pointer
          place-content-center" [routerLink]="page?.url" routerLinkActive="router-link-active">
         <h2 class="title-main text-primary-green leading-6 text-center font-semibold text-2xl mb-8">{{page?.title | uppercase}}</h2>
         <p class="text-sm">{{page?.description}}</p>

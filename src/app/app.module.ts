@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { ClothingComponent } from './components/clothing/clothing.component';
 import { SupermarketComponent } from './components/supermarket/supermarket.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
+import { HeaderComponent } from './components/shared/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ClothingComponent,
-    SupermarketComponent
+    SupermarketComponent,
+    FooterComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
