@@ -1,18 +1,24 @@
 {
     "homePages":[
         {
-            "title": "WELCOME",
+            "title": "Home",
+            "description": "Home",
+            "name":"ANTONIO NEBRIJA",
             "url": "/home"
         },
         {
             "title": "ROPA",
+            "description": "camisetas, chaquetas, zapatos, etc",
+            "name": "SHEINOM",
             "url":"/clothing"
         },{
             "title":"ALIMENTACION",
+            "description": "camisetas, chaquetas, zapatos, etc",
+            "name":"FRUTEC",
             "url":"/supermarket"
         }
     ],
     "titleHome":"Bienvenido a mi tienda",
-    "descriptionHome": "Bienvenido a comprar lo que quieraas y disfruta de mi nueva pagina web con angular y springboot"
-    
+    "descriptionHome": "Bienvenido a comprar lo que quieras y disfruta de mi nueva pagina web con Angular y SpringBoot",
+    "companyName": "Mini TFG S.L"
 }

@@ -1,7 +1,38 @@
 <nav class="bg-white z-10 w-full relative shadow">
-    <div class="py-5">
-       <div class="flex items-center justify-between container mx-auto px-14 ">
-          
-       </div>
+  <div class="py-5">
+    <div class="flex items-center justify-between container mx-auto px-14">
+      <div class="flex items-center">
+        <div
+          id="menu-icon"
+          class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+        >
+          <span class="sr-only">Open main menu</span>
+          <img
+            alt="menu icon"
+            aria-expanded="true"
+            aria-controls="sidebar"
+            (click)="toggleSidebar()"
+            class="w-8"
+            src="../../../assets/img/menu_icon.svg"
+          />
+        </div>
+      </div>
+      <a class="flex place-items-center">
+        <p class="self-center whitespace-nowrap text-6xl font-black">
+          {{ literals.name }}
+        </p>
+      </a>
+      <div class="flex items-center justify-between">
+        <button id="button1" class="mr-3">
+          <img class="w-6" src="../../../assets/img/profile_icon.svg" />
+        </button>
+        <button id="button2" class="mr-3">
+          <img class="w-7" src="../../../assets/img/like_icon.svg" />
+        </button>
+        <button id="button3" class="">
+          <img class="w-7" src="../../../assets/img/cart_icon.svg" />
+        </button>
+      </div>
     </div>
-  </nav>
+  </div>
+</nav>

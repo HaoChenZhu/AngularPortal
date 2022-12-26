@@ -1,6 +1,7 @@
 <app-header></app-header>
-<div class="container container-global mx-auto py-10 px-16"><!--  fixed screen y lo centramo con mx -->
-  <h1 class="text-3xl font-bold underline"> Hello world</h1>
+<app-sidebar></app-sidebar>
+
+<div class="container container-global mx-auto py-2 px-16 font-semibold" (click)="toggleSidebar()"><!--  fixed screen y lo centramo con mx -->
   <router-outlet></router-outlet>
 </div>
 

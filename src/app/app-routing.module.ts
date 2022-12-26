@@ -7,7 +7,9 @@ import { SupermarketComponent } from './components/supermarket/supermarket.compo
 const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'clothing',component:ClothingComponent},
-  {path:'supermarket',component:SupermarketComponent}
+  {path:'supermarket',component:SupermarketComponent},
+  {path:'', redirectTo:'home', pathMatch: 'full'},
+  {path:'**', redirectTo:'home', pathMatch: 'full'}
 ];
 
 @NgModule({

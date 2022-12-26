@@ -11,16 +11,16 @@ export class CommonService {
   getLiterals():any{
     let title:string ="";
     let desc:string= "";
-    let headers:string[]=[];
+    let name:string='';
 
     literals.homePages.forEach((page:any) => {
       if(page.url === this.router.url){
-       
+        console.log("DEsde service"+this.router.url)
         title = page.title;
         desc = page.description;
-        headers = page.headers;
+        name = page.name
       }
     });
-    return {title,desc,headers,...literals}
+    return {title,desc,name,...literals}
     }
 }

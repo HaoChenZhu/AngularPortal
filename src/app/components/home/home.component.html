@@ -1,13 +1,18 @@
-<h1 class="text-xl"> {{titleHome}}</h1>
-
-<p class="my-5">{{descriptionHome}}</p>
-
-<div class="grid grid-cols-2 gap-7">
-    <ng-container *ngFor="let page of homePages">
-        <div *ngIf="page.url !== '/home'" class="box-main border-black border-2 rounded-md py-36 px-8 max-h-80 grid content-center hover:cursor-pointer
+<h1 class="text-4xl"> {{titleHome}}</h1>
+<p class="mt-10 ">{{descriptionHome}}</p>
+<div class="grid grid-cols-2 gap-7 mt-10 mb-16">
+    <ng-container *ngFor="let page of homePages;  index as i">
+        <div *ngIf="page.url !== '/home'" class="relative border-black border-4 rounded-md grid
          place-content-center" [routerLink]="page?.url" routerLinkActive="router-link-active">
-        <h2 class="title-main text-primary-green leading-6 text-center font-semibold text-2xl mb-8">{{page?.title | uppercase}}</h2>
-        <p class="text-sm">{{page?.description}}</p>
+            <img src={{shops[i-1].shop_img}}
+                class=" max-w-[100%] max-h-[100%] object-center rounded ">
+            <div class="relative bg-gray-200 text-center p-2">
+                <h2 class=" title-main text-violet-600 leading-6 font-semibold text-2xl mb-0.5">
+                    {{shops[i-1].name | uppercase}}</h2>
+                <p class="text-sm">{{shops[i-1].location.address }}, {{shops[i-1].location.city}} 
+                    , {{shops[i-1].location.code}}, {{shops[i-1].location.country}}
+                </p>
+            </div>
         </div>
     </ng-container>
-</div>
+</div> 
