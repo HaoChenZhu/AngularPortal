@@ -1,19 +1,27 @@
-<div class="grid grid-cols-4 gap-5 justify-items-center">
-    <div *ngFor="let pro of listProduct" class="bg-white shadow-md hover:scale-105 duration-300 ">
-        <div class="">
-            <img class="h-80 w-72 object-cover"
-                src={{pro.productImg}} alt="">
-        </div>
-        <div class="px-4 py-3">
-            <span class="text-gray-400 text-sm">
-                {{pro.productName}}
-            </span>
-            <p class="text-lg font-bold block truncate capitalize"> {{pro.productDescription}}</p>
+<div class="text-xs m-4">
+  <app-filter-clothing (form)="handleForm($event)"></app-filter-clothing>
+</div>
 
-            <p class="text-lg font-semibold my-3">{{pro.price}}€</p>
-            <div class="ml-auto">
-                <button class="bg-black"></button>
-            </div>
-        </div>
+<div class="grid grid-cols-4 gap-5 justify-items-center">
+  <div
+    *ngFor="let pro of listProduct"
+    class="bg-white shadow-md hover:scale-105 duration-300"
+  >
+    <div class="">
+      <img class="h-80 w-72 object-cover" src="{{ pro.productImg }}" alt="" />
     </div>
+    <div class="px-4 py-3">
+      <span class="text-gray-400 text-sm">
+        {{ pro.productName }}
+      </span>
+      <p class="text-lg font-bold block truncate capitalize">
+        {{ pro.productDescription }}
+      </p>
+
+      <p class="text-lg font-semibold my-3">{{ pro.price }}€</p>
+      <div class="ml-auto">
+        <button class="bg-black"></button>
+      </div>
+    </div>
+  </div>
 </div>

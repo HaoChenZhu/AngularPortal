@@ -20,5 +20,10 @@
     ],
     "titleHome":"Bienvenido a mi tienda",
     "descriptionHome": "Bienvenido a comprar lo que quieras y disfruta de mi nueva pagina web con Angular y SpringBoot",
-    "companyName": "Mini TFG S.L"
+    "companyName": "Mini TFG S.L",
+    "filterBy": "Filtrar por",
+    "price": "Precio",
+    "brand": "Marca",
+    "color":"Color",
+    "filter": "Filtrar"
 }

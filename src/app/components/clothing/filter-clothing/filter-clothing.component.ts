@@ -10,13 +10,34 @@ import { CommonService } from 'src/app/services/common.service';
 export class FilterClothingComponent implements OnInit {
 
   literals: any = {};
-
+  filterRed = false;
+  filterBlack = false;
+  filterBlue = false;
+  filterWhite = false;
   @Output() form = new EventEmitter<NgForm>();
 
   constructor(private _commonService: CommonService) {}
-
+  
   ngOnInit(): void {
+    this.filterRed = false;
+  this.filterBlack = false;
+  this.filterBlue = false;
+  this.filterWhite = false;
     this.literals = this._commonService.getLiterals();
+  }
+
+  onFilterRedChange(event:any){
+    this.filterRed=!this.filterRed;
+    console.log(this.filterRed);
+  }
+  onFilterBlueChange(event:any){
+    this.filterBlue=!this.filterBlue;
+  }
+  onFilterBlackChange(event:any){
+    this.filterBlack=!this.filterBlack;
+  }
+  onFilterWhiteChange(event:any){
+    this.filterWhite=!this.filterWhite;
   }
 
   toggleFilter() {
@@ -30,5 +51,6 @@ export class FilterClothingComponent implements OnInit {
   filter(f: NgForm) {
     this.toggleFilter();
     this.form.emit(f);
+    console.log(f)
   }
 }

@@ -1,1 +1,116 @@
-<p>filter-clothing works!</p>
+<button class="rounded border border-black p-1" (click)="toggleFilter()">
+  {{ literals.filterBy }} <span class="mr-1 font-bold">:</span>
+</button>
+
+<img
+  src="../../../../assets/img/cross_filter.svg"
+  id="cross-filter"
+  class="absolute z-10 hidden -translate-y-7 -translate-x-7"
+  (click)="toggleFilter()"
+/>
+
+<form
+  id="filter"
+  class="absolute z-10 grid hidden -translate-y-7 grid-cols-1 gap-2 rounded border bg-white p-3 text-left text-sm shadow-md"
+  #f="ngForm"
+  (ngSubmit)="filter(f)"
+>
+  <div class="flex gap-4">
+    <label>{{ literals.price + ": " }}</label>
+    <input
+      type="number"
+      name="min_price"
+      class="input-search rounded border p-1 pl-10 w-24"
+      placeholder="{{ 0 }}"
+      ngModel
+      #fixed_content="ngModel"
+    />
+    <input
+      type="number"
+      name="max_price"
+      class="input-search rounded border p-1 pl-10 w-24"
+      placeholder="{{ 50 }}"
+      ngModel
+      #fixed_content="ngModel"
+    />
+  </div>
+
+  <div class="flex gap-4">
+    <label>{{ literals.brand }}</label>
+    <input
+      type="text"
+      name="fixed_content"
+      class="input-search rounded border p-1 pl-8"
+      placeholder="Nike"
+      ngModel
+      #fixed_content="ngModel"
+    />
+  </div>
+  <div class="flex gap-4">
+    <label>{{ literals.color }}</label>
+    <div class="form-group">
+      <label
+        [ngClass]="{ 'border-black': filterRed }"
+        class="inline-block w-10 h-10 rounded-full shadow-inner bg-red-700 border-2"
+      >
+        <input
+          type="checkbox"
+          class="input-search opacity-0"
+          name="filterRed"
+          ngModel
+          (change)="onFilterRedChange($event)"
+        />
+      </label>
+    </div>
+    <div class="form-group">
+      <label
+        [ngClass]="{ 'border-black': filterBlue }"
+        class="inline-block w-10 h-10 rounded-full shadow-inner bg-blue-700 border-2"
+      >
+        <input
+          type="checkbox"
+          class="input-search opacity-0"
+          name="filterBlue"
+          ngModel
+          (change)="onFilterBlueChange($event)"
+        />
+      </label>
+    </div>
+    <div class="form-group">
+      <label
+        [ngClass]="{ 'border-black': filterWhite }"
+        class="inline-block w-10 h-10 rounded-full shadow-inner bg-white border-2"
+      >
+        <input
+          type="checkbox"
+          class="input-search opacity-0"
+          name="filterWhite"
+          ngModel
+          (change)="onFilterWhiteChange($event)"
+        />
+      </label>
+    </div>
+    <div class="form-group">
+      <label
+        [ngClass]="{ 'border-black': filterBlack }"
+        class="inline-block w-10 h-10 rounded-full shadow-inner bg-black border-2"
+      >
+        <input
+          type="checkbox"
+          class="input-search opacity-0"
+          name="filterBlack"
+          ngModel
+          (change)="onFilterBlackChange($event)"
+        />
+      </label>
+    </div>
+  </div>
+
+  <button
+    type="submit"
+    value="Filtrar"
+    class="mx-4 cursor-pointer bg-gray-400 rounded bg-primary-green p-2 text-black hover:opacity-50"
+  >
+    {{ literals.filter }}
+  </button>
+</form>
